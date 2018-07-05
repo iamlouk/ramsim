@@ -1,0 +1,20 @@
+# c(3)/c(0) = c(1) * c(2)
+# usage: goram examples/mult.ram.txt 3 4
+# Aber: ohne mult
+
+	CLOAD 0
+	STORE 3
+	LOAD 1
+	GOTO loop_cond
+loop_body:
+	LOAD 3
+	ADD 2
+	STORE 3
+	LOAD 1
+	CSUB 1
+	STORE 1
+loop_cond:
+	IF > 0 GOTO loop_body
+	LOAD 3
+	END
+

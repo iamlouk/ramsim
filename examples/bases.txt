@@ -1,0 +1,28 @@
+# c(10)... ist die darstellung von c(1) zur basis c(2)
+
+    LOAD 2
+    IF = 0 GOTO end
+    STORE 7
+
+    CLOAD 10
+    STORE 6
+    LOAD 1
+    STORE 2
+loop:
+    DIV 7
+    STORE 3
+    MUL 7
+    STORE 4
+    LOAD 2
+    SUB 4
+    INDSTORE 6
+    LOAD 6
+    CADD 1
+    STORE 6
+    LOAD 3
+    STORE 2
+    IF > 0 GOTO loop
+end:
+    END
+
+
